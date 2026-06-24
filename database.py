@@ -5,7 +5,7 @@ import config
 
 # Initialize MongoDB Client
 client = AsyncIOMotorClient(config.MONGO_URI)
-db = client.get_default_database()
+db = client.get_default_database(default="telegram_index_bot")
 
 # Collections
 users_col = db["users"]
