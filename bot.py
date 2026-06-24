@@ -4,7 +4,7 @@ import re
 import base64
 import logging
 from bson import ObjectId
-from pyrogram import Client, filters, enums
+from pyrogram import Client, filters, enums, idle
 from pyrogram.types import (
     Message,
     InlineKeyboardMarkup,
@@ -919,10 +919,10 @@ async def main():
     asyncio.create_task(start_auto_delete_scheduler())
     
     # Keep the bot running
-    await pyrogram.idle()
+    await idle()
     
     await app.stop()
 
 if __name__ == "__main__":
-    app.run(main())
+    asyncio.run(main())
 
