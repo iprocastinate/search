@@ -1,0 +1,6 @@
+pyrogram
+motor
+python-dotenv
+pymongo
+dnspython
+
